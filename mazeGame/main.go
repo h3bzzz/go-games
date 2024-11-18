@@ -26,10 +26,10 @@ type Game struct {
 	player      Position
 	exit        Position
 	randGen     *rand.Rand
-	frames      []*ebiten.Image // Store extracted frames from the GIF
+	frames      []*ebiten.Image 
 	animFrame   int
 	animCounter int
-	facingLeft  bool // Track if player is facing left
+	facingLeft  bool t
 }
 
 type Position struct {
@@ -47,7 +47,6 @@ func NewGame() *Game {
 	return g
 }
 
-// Load and extract frames from a GIF file
 func (g *Game) loadGifFrames(path string) {
 	f, err := os.Open(path)
 	if err != nil {
@@ -60,7 +59,6 @@ func (g *Game) loadGifFrames(path string) {
 		log.Fatal(err)
 	}
 
-	// Convert each frame in the GIF to an ebiten.Image
 	for _, frame := range gifImage.Image {
 		img := ebiten.NewImageFromImage(frame)
 		g.frames = append(g.frames, img)
@@ -114,15 +112,15 @@ func (g *Game) Update() error {
 		moved = true
 	} else if ebiten.IsKeyPressed(ebiten.KeyLeft) && g.canMoveTo(g.player.X-1, g.player.Y) {
 		g.player.X--
-		g.facingLeft = true // Set facing left
+		g.facingLeft = true 
 		moved = true
 	} else if ebiten.IsKeyPressed(ebiten.KeyRight) && g.canMoveTo(g.player.X+1, g.player.Y) {
 		g.player.X++
-		g.facingLeft = false // Set facing right
+		g.facingLeft = false
 		moved = true
 	}
 
-	// Update animation frame if player moved
+	
 	if moved {
 		g.animCounter++
 		if g.animCounter >= animSpeed {
@@ -131,7 +129,7 @@ func (g *Game) Update() error {
 		}
 	}
 
-	// Check if player reached the exit
+
 	if g.player == g.exit {
 		g.generateMaze()
 		g.player = Position{X: 0, Y: 0}
