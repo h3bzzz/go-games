@@ -16,6 +16,64 @@ Smooth player movement with directional animation.
 Animated player character using a sprite sheet (GIF).
 Maze regeneration upon reaching the exit.
 
+# Gopher Platform Runner
+
+A platform-based runner game featuring the Go gopher mascot traversing randomly generated levels.
+
+## Features
+
+- 10 progressively difficult levels with randomized platform generation
+- Platform physics with jumping, double-jumping, wall-jumping, and dashing abilities
+- Different platform types (normal, moving, breaking, bouncy)
+- Collectibles to gather for points
+- Obstacles to avoid
+- Lives system and score tracking
+
+## Controls
+
+- **Left/Right Arrow Keys or A/D**: Move left/right
+- **Space, W, or Up Arrow**: Jump (press again in mid-air for double jump)
+- **Shift or E**: Dash
+- **F1**: Toggle debug mode
+- **Esc**: Pause game
+
+## How to Run
+
+Navigate to the mazeGame directory and run:
+
+```bash
+go run *.go
+```
+
+Or build an executable:
+
+```bash
+cd mazeGame
+go build
+./mazeGame
+```
+
+## Progression
+
+- **Level 1-2**: Basic platforming
+- **Level 3**: Unlocks double jump
+- **Level 4-5**: Introduces moving and breaking platforms
+- **Level 5**: Unlocks wall jump
+- **Level 6-7**: Increases obstacles and platform difficulty
+- **Level 7**: Unlocks dash ability
+- **Level 8-10**: Maximum challenge with all mechanics
+
+## Development
+
+This game was created as an overhaul of a simple maze game, transformed into a full-featured platformer with physics, level progression, and advanced game mechanics.
+
+Future improvements may include:
+- Additional animations
+- Sound effects and music
+- More varied obstacle types
+- Boss encounters
+- Level editor
+
 💡 What I Learned
 Programming Concepts
 Game Loops:
