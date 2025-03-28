@@ -2,6 +2,8 @@
 
 A full-featured chess game built with Go and the Fyne UI toolkit. This project implements chess rules, AI opponents with multiple difficulty levels, and a clean modern interface.
 
+![Chess Game Screenshot](https://github.com/h3bzzz/go-chess/raw/main/assets/screenshots/game.png)
+
 ## Features
 
 - Complete chess rule implementation including castling, en passant, promotion
@@ -9,10 +11,21 @@ A full-featured chess game built with Go and the Fyne UI toolkit. This project i
   - Easy: Makes reasonable moves but misses opportunities
   - Medium: Captures pieces and avoids obvious traps
   - Hard: Uses positional strategy and looks for tactical opportunities
-- Multiple board themes
+- Multiple board themes (Classic, Green, Pink)
 - Game timer with clock for timed games
 - Move history tracking
 - Drag and drop piece movement
+
+## Screenshots
+
+### Classic Theme
+![Classic Theme](https://github.com/h3bzzz/go-chess/raw/main/assets/screenshots/classic.png)
+
+### Green Theme
+![Green Theme](https://github.com/h3bzzz/go-chess/raw/main/assets/screenshots/green.png)
+
+### Pink Theme
+![Pink Theme](https://github.com/h3bzzz/go-chess/raw/main/assets/screenshots/pink.png)
 
 ## How It Works
 
@@ -27,7 +40,7 @@ The chess implementation uses a standard 8x8 board represented as a 2D array, wi
 
 ### AI Implementation
 
-The AI uses a score-based evaluation approach:
+The "AI" uses a score-based evaluation approach:
 
 - Piece values: Traditional chess piece values (pawns: 100, knights/bishops: ~330, rooks: 500, queen: 900)
 - Position evaluation: Bonuses for controlling the center and developing pieces early
