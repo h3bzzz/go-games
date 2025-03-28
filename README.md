@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Go Chess
 
 A full-featured chess game built with Go and the Fyne UI toolkit. This project implements chess rules, AI opponents with multiple difficulty levels, and a clean modern interface.
